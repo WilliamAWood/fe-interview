@@ -1,8 +1,8 @@
 import {asyncActionTypes} from './async-action-types';
 
 const FETCH_ALL_BILLS_ACTION_TYPES = asyncActionTypes('FETCH_ALL_BILLS');
+
 const SET_IS_BILL_ACTION_TYPES = asyncActionTypes('SET_IS_BILL');
-const SET_NOT_BILL_ACTION_TYPES = asyncActionTypes('SET_NOT_BILL');
 
 const fetchAllBills = () => dispatch => {
     dispatch({
@@ -15,35 +15,26 @@ const fetchAllBills = () => dispatch => {
     })
 };
 
-const setIsBill = (id) => dispatch => {
+const setIsBill = (id, isBill) => dispatch => {
     dispatch({
         type: 'API',
         method: 'PATCH',
         payload: {
             url: `bills/${id}`,
+            body: {
+                isBill: isBill
+            },
             ...SET_IS_BILL_ACTION_TYPES
         }
-    })
+    });
 };
 
-const setNotBill = (id) => dispatch => {
-    dispatch({
-        type: 'API',
-        method: 'PATCH',
-        payload: {
-            url: `bills/${id}`,
-            ...SET_NOT_BILL_ACTION_TYPES
-        }
-    })
-};
-
-export const productActions = {
+export const allBillsActions = {
     fetchAllBills,
     setIsBill,
     types: {
-        ...FETCH_ALL_BILLS_ACTION_TYPES,
-        ...SET_IS_BILL_ACTION_TYPES,
-        ...SET_IS_BILL_ACTION_TYPES
+        FETCH_ALL_BILLS_ACTION_TYPES,
+        SET_IS_BILL_ACTION_TYPES,
     }
 };
 

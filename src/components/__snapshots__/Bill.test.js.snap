@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li>
+  <div
+    className="sc-bdVaJa fxcUYs"
+    data-test="billRow-1"
+    onClick={[Function]}
+  >
+    Vodafone
+    <ul>
+      <li>
+        <p>
+          date: 
+          2018-01-13
+        </p>
+        <p>
+          amount: 
+          12
+        </p>
+      </li>
+    </ul>
+  </div>
+  <button
+    data-test="billButton-1"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "white",
+        "border": "2px solid palevioletred",
+        "color": "palevioletred",
+      }
+    }
+  >
+    is not bill
+  </button>
+</li>
+`;

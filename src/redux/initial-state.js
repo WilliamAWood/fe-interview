@@ -1,11 +1,8 @@
-export const entity = {
-    isFetching: false
-};
 
 export default {
     allBills: {
-        ...entity,
+        isFetching: false,
+        isDirty: false,
         data: []
-    },
-    activeBills: []
+    }
 }

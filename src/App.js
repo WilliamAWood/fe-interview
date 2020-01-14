@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import welcomeIcon from './assets/welcome.jpg';
+import Tabs from "./components/Tabs";
 
-class App extends Component {
-  render() {
-    return (
-      <img src={welcomeIcon} alt="Welcome!"/>
-    );
-  }
-}
+const App = () => (
+    <Tabs/>
+);
 
 export default App;

@@ -5,13 +5,14 @@
   "dependencies": {
     "json-server": "^0.14.0",
     "node-sass": "^4.9.4",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-redux": "^7.1.3",
     "react-scripts": "2.0.5",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^4.0.2"
+    "styled-components": "^4.0.2",
+    "react-test-renderer": "latest"
   },
   "scripts": {
     "api": "json-server --watch db.json --port 3002",
@@ -27,5 +28,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2"
+  }
 }

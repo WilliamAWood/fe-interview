@@ -1,3 +1,5 @@
+import {APIConstants} from "../shared/constants";
+
 export const apiMiddleware = () => ({dispatch}) => next => action => {
 
     if (action.type !== 'API'){
@@ -8,7 +10,7 @@ export const apiMiddleware = () => ({dispatch}) => next => action => {
         type: action.payload.PENDING
     });
 
-    return fetch(`http://localhost:3002/${action.payload.url}`, {
+    return fetch(`${APIConstants.base}${action.payload.url}`, {
         method: action.method,
         headers: {
             'Content-Type': 'application/json'

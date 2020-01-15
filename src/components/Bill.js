@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyledRow} from "../styled-components/StyledRow";
-import {buttonStyle} from "../styled-components/buttonStyle";
+import {StyledButton} from "../styled-components/StyledButton";
 
 class Bill extends Component {
 
@@ -25,10 +25,10 @@ class Bill extends Component {
                         ))}
                     </ul>}
                 </StyledRow>
-                <button style={buttonStyle} data-test={`billButton-${bill.id}`}
+                <StyledButton data-test={`billButton-${bill.id}`}
                         onClick={() => onButtonClick()}>
                     {bill.isBill ? 'is not bill' : 'is bill'}
-                </button>
+                </StyledButton>
             </li>
         );
     }

@@ -22,15 +22,9 @@ exports[`renders correctly 1`] = `
     </ul>
   </div>
   <button
+    className="sc-bwzfXH gQtLxs"
     data-test="billButton-1"
     onClick={[Function]}
-    style={
-      Object {
-        "background": "white",
-        "border": "2px solid palevioletred",
-        "color": "palevioletred",
-      }
-    }
   >
     is not bill
   </button>

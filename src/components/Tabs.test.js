@@ -3,6 +3,7 @@ import {mount, shallow} from 'enzyme'
 import { Tabs } from './Tabs'
 import Bill from "./Bill";
 import {StyledRow} from "../styled-components/StyledRow";
+import {StyledButton} from "../styled-components/StyledButton";
 
 describe('Tabs', () => {
     let fetchAllBills, setIsBill;
@@ -40,7 +41,7 @@ describe('Tabs', () => {
     beforeEach(() => {
         fetchAllBills = jest.fn();
         setIsBill = jest.fn();
-        
+
         wrapper = mount(<Tabs
             allBills={allBills}
             fetchAllBills={fetchAllBills}
@@ -92,8 +93,8 @@ describe('Tabs', () => {
         expect(reRenderedRow.props().isActive).toEqual(true)
     });
 
-    test('calls setIsBill when button', () => {
-        const billButton = wrapper.find('[data-test="billButton-1"]');
+    test('calls setIsBill when button pressed', () => {
+        const billButton = wrapper.find(StyledButton);
 
         expect(billButton.length).toEqual(1);
 
